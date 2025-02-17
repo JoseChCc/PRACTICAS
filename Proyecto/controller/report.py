@@ -21,7 +21,7 @@ def GenerateReportVentas(app:App):
     """
     df=pd.read_sql_query(query,conn)
     fecha="16-Febrero"
-    path=f" /workspaces/PRACTICAS/Proyecto/files/Data-{fecha}.csv"
+    path=f"/workspaces/PRACTICAS/Proyecto/files/Data-{fecha}.csv"
     df.to_csv(path)
     sendMail(app,path)
 
